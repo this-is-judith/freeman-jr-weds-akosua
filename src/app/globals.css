@@ -10,6 +10,21 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Wedding Colours */
+  --color-emerald: #527744;
+  --color-burgundy: #700020;
+  --color-off-white: #faf8f5;
+  --color-navy: #111214;
+
+  /* Other Colours */
+  --color-dusty-rose: #d4909e;
+  --color-rose-light: #f7ede7;
+  --color-sage: #4a6741;
+  --color-gold: #febc06;
+  --color-terracotta: #b57862;
+  --color-dark-burgundy: #4a3933;
+  --color-new: #b8c1be;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +38,141 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Elegant vine background with depth */
+.vine-bg {
+  background-image: radial-gradient(
+      1200px 500px at 110% -15%,
+      color-mix(in oklab, var(--color-dusty-rose) 40%, transparent) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      800px 400px at -15% 25%,
+      color-mix(in oklab, var(--color-emerald) 35%, transparent) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      600px 600px at 50% 100%,
+      color-mix(in oklab, var(--color-sage) 25%, transparent) 0%,
+      transparent 70%
+    );
+}
+
+/* Floral accent background */
+.floral-bg {
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--color-rose-light) 70%, white) 0%,
+    color-mix(in oklab, var(--color-off-white) 90%, white) 100%
+  );
+}
+
+/* Font helpers */
+.font-parisienne {
+  font-family: var(--font-comic-neue);
+}
+.font-dancing-script {
+  font-family: var(--font-dancing-script);
+}
+
+/* Elegant animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes polaroidFloat1 {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-6deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-6deg);
+  }
+}
+
+@keyframes polaroidFloat2 {
+  0%,
+  100% {
+    transform: translateY(0) rotate(3deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}
+
+@keyframes polaroidFloat3 {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-8deg);
+  }
+}
+
+@keyframes polaroidFloat4 {
+  0%,
+  100% {
+    transform: translateY(0) rotate(12deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(12deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -15px rgba(139, 111, 102, 0.2);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glass morphism effect */
+.glass {
+  backdrop-filter: blur(10px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(209, 213, 219, 0.3);
 }
