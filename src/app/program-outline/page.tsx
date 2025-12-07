@@ -53,7 +53,7 @@ export default function ProgramOutline() {
   // const allEvents = [...ceremonyEvents, ...receptionEvents];
 
   return (
-    <div className="min-h-screen bg-off-white">
+    <div className="bg-off-white">
       <section className="md:pt-28 pt-20 relative overflow-hidden">
         <img
           src="/plant-8.png"
@@ -79,7 +79,7 @@ export default function ProgramOutline() {
               </p>
             </div>
 
-            <div className="text-center md:py-12 py-6">
+            <div className="text-center md:py-12 py-8">
               <p className="text-xl text-navy/80 mb-4">
                 The program outline will be released shortly.
               </p>
@@ -120,7 +120,7 @@ export default function ProgramOutline() {
         </div>
       </section>
 
-      <section className="text-center bg-off-white md:py-16 py-8">
+      <section className="text-center bg-off-white md:py-16 py-12">
         <a
           href="/"
           className="inline-block text-burgundy hover:text-navy transition-all font-medium"

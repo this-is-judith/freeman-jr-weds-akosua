@@ -1,6 +1,6 @@
 export default function OurStory() {
   return (
-    <div className="min-h-screen bg-off-white">
+    <div className=" bg-off-white">
       {/* Title */}
       <section className="md:pt-20 pt-12 text-center">
         <div className="max-w-6xl mx-auto px-4">
