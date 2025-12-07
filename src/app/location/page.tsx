@@ -14,18 +14,18 @@ export default function Location() {
         <img
           src="/plant-17.png"
           alt="Plant 17"
-          className="absolute -top-8 -right-16 w-72 h-72 md:w-84 md:h-84 object-contain opacity-60"
+          className="absolute md:-top-8 -top-18 md:-right-16 -right-12 w-48 h-48 md:w-84 md:h-84 object-contain opacity-100"
         />
 
         <img
           src="/plant-17.png"
           alt="Plant 17"
-          className="absolute -top-8 -left-16 w-72 h-72 md:w-84 md:h-84 object-contain opacity-60"
+          className="absolute md:-top-8 -top-18 md:-left-16 -left-12 w-48 h-48 md:w-72 md:h-72 md:w-84 md:h-84 object-contain opacity-100"
         />
 
         <div className="max-w-4xl mx-auto px-4">
           <div className="bg-white border-1 border-navy shadow-lg p-8">
-            <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-4">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-4 md:pt-0 pt-4">
               {churchName}
             </h2>
             <p className="text-lg text-navy/80 mb-8">{address}</p>
@@ -79,7 +79,7 @@ export default function Location() {
         </div>
       </section>
 
-      <section className="text-center bg-off-white py-16">
+      <section className="text-center bg-off-white md:py-16 py-8">
         <a
           href="/"
           className="inline-block text-burgundy hover:text-navy transition-all font-medium"

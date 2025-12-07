@@ -58,13 +58,13 @@ export default function ProgramOutline() {
         <img
           src="/plant-8.png"
           alt="Plant 8"
-          className="absolute -top-4 -right-16 w-72 h-72 md:w-84 md:h-84 object-contain opacity-60"
+          className="absolute md:-top-4 -top-18 md:-right-16 -right-12 w-48 h-48 md:w-84 md:h-84 object-contain opacity-100"
         />
 
         <img
           src="/plant-8.png"
           alt="Plant 8"
-          className="absolute -top-4 -left-16 w-72 h-72 md:w-84 md:h-84 object-contain opacity-60"
+          className="absolute md:-top-4 -top-18 md:-left-16 -left-12 w-48 h-48 md:w-84 md:h-84 object-contain opacity-100"
         />
 
         <div className="max-w-3xl mx-auto px-4">
@@ -79,7 +79,7 @@ export default function ProgramOutline() {
               </p>
             </div>
 
-            <div className="text-center py-12">
+            <div className="text-center md:py-12 py-6">
               <p className="text-xl text-navy/80 mb-4">
                 The program outline will be released shortly.
               </p>
@@ -120,7 +120,7 @@ export default function ProgramOutline() {
         </div>
       </section>
 
-      <section className="text-center bg-off-white py-16">
+      <section className="text-center bg-off-white md:py-16 py-8">
         <a
           href="/"
           className="inline-block text-burgundy hover:text-navy transition-all font-medium"
