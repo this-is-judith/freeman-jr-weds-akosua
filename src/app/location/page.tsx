@@ -10,7 +10,7 @@ export default function Location() {
 
   return (
     <div className="min-h-screen bg-off-white relative overflow-hidden">
-      <section className="py-16 md:pt-28 pt-20 text-center">
+      <section className="md:pt-28 pt-20 text-center">
         <img
           src="/plant-17.png"
           alt="Plant 17"
@@ -24,7 +24,7 @@ export default function Location() {
         />
 
         <div className="max-w-4xl mx-auto px-4">
-          <div className="bg-white border-1 border-navy shadow-lg p-8 mb-8">
+          <div className="bg-white border-1 border-navy shadow-lg p-8">
             <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-4">
               {churchName}
             </h2>
@@ -76,14 +76,16 @@ export default function Location() {
               ></iframe>
             </div>
           </div>
-
-          <a
-            href="/"
-            className="inline-block px-8 py-4 text-burgundy hover:text-navy transition-all font-medium"
-          >
-            ← Back to Home
-          </a>
         </div>
+      </section>
+
+      <section className="text-center bg-off-white py-16">
+        <a
+          href="/"
+          className="inline-block text-burgundy hover:text-navy transition-all font-medium"
+        >
+          ← Back to Home
+        </a>
       </section>
     </div>
   );

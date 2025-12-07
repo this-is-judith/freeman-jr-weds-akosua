@@ -12,76 +12,66 @@ export default function SupportUs() {
   };
 
   return (
-    <div className="min-h-screen bg-off-white">
-      {/* Title */}
-      <section className="pt-32 text-center">
-        <h1 className="max-w-4xl mx-auto px-4 text-4xl sm:text-5xl font-bold text-navy mb-4">
-          How To Give
-        </h1>
-      </section>
-
+    <div className="bg-off-white">
       {/* Gift Options */}
-      <section className="pt-8">
+      <section className="md:pt-28 pt-20 relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid lg:grid-cols-[1fr_1.5fr] md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-[1fr_1.5fr] md:grid-cols-2 gap-12">
             {/* Mobile Money */}
-            <div className="bg-navy shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-off-white text-center mb-6">
+            <div className="bg-white border-1 border-navy shadow-lg p-8">
+              <h2 className="text-2xl font-bold text-navy text-center mb-6">
                 Mobile Money
               </h2>
-              <div className="space-y-6">
-                <div className="bg-off-white p-6">
-                  <h3 className="font-semibold text-burgundy mb-4">
-                    MTN Mobile Money
-                  </h3>
+
+              <div className="space-y-8 align-items">
+                <div className="bg-white border-1 border-navy shadow-lg p-6">
+                  <h3 className="font-semibold text-burgundy mb-4">Telecel</h3>
                   <div className="space-y-2">
                     <div className="flex justify-between">
-                      <span className="text-navy/60">Name:</span>
+                      <span className="text-navy/70">Name:</span>
                       <span className="font-medium text-navy">
-                        Freeman Osei-Tete
+                        Freeman Kofi Pabi Osei-Tete
                       </span>
                     </div>
                     <div className="flex justify-between items-center gap-2">
-                      <span className="text-navy/60">Number:</span>
+                      <span className="text-navy/70">Number:</span>
                       <div className="flex items-center gap-2">
                         <span className="font-medium text-navy font-mono">
-                          0557331091
+                          0204490324
                         </span>
                         <button
-                          onClick={() => copyToClipboard("0557331091", "mtn")}
+                          onClick={() =>
+                            copyToClipboard("0204490324", "telecel")
+                          }
                           className="px-3 py-1 text-xs bg-burgundy text-white hover:bg-burgundy/90 transition-all"
                         >
-                          {copiedField === "mtn" ? "Copied!" : "Copy"}
+                          {copiedField === "telecel" ? "Copied!" : "Copy"}
                         </button>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-off-white p-6">
-                  <h3 className="font-semibold text-burgundy mb-4">
-                    Vodafone Cash
-                  </h3>
+                <div className="bg-white border-1 border-navy shadow-lg p-6">
+                  <h3 className="font-semibold text-burgundy mb-4">MTN</h3>
                   <div className="space-y-2">
                     <div className="flex justify-between">
-                      <span className="text-navy/60">Name:</span>
+                      <span className="text-navy/70">Name:</span>
                       <span className="font-medium text-navy">
                         Akosua Ndwaa Nyamekye
                       </span>
                     </div>
                     <div className="flex justify-between items-center gap-2">
-                      <span className="text-navy/60">Number:</span>
+                      <span className="text-navy/70">Number:</span>
                       <div className="flex items-center gap-2">
                         <span className="font-medium text-navy font-mono">
-                          0XXXXXXXXX
+                          0545093092
                         </span>
                         <button
-                          onClick={() =>
-                            copyToClipboard("0XXXXXXXXX", "vodafone")
-                          }
+                          onClick={() => copyToClipboard("0545093092", "mtn")}
                           className="px-3 py-1 text-xs bg-burgundy text-white hover:bg-burgundy/90 transition-all"
                         >
-                          {copiedField === "vodafone" ? "Copied!" : "Copy"}
+                          {copiedField === "mtn" ? "Copied!" : "Copy"}
                         </button>
                       </div>
                     </div>
@@ -91,30 +81,30 @@ export default function SupportUs() {
             </div>
 
             {/* Bank Transfer */}
-            <div className="bg-navy shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-offw-white text-center mb-6">
+            <div className="bg-white border-1 border-navy shadow-lg p-8">
+              <h2 className="text-2xl font-bold text-navy text-center mb-6">
                 Bank Transfer
               </h2>
-              <div className="bg-off-white p-4 lg:py-8 lg:px-8">
+              <div className="bg-white border-1 border-navy p-4 lg:py-8 lg:px-8">
                 <h3 className="font-semibold text-burgundy mb-4 text-center">
                   Bank Account Details
                 </h3>
-                <div className="space-y-3 lg:space-y-6">
+                <div className="space-y-3 lg:space-y-8.5">
                   <div className="flex justify-between">
-                    <span className="text-navy/60">Bank Name:</span>
-                    <span className="font-medium text-navy">GCB Bank</span>
+                    <span className="text-navy/70">Bank Name:</span>
+                    <span className="font-medium text-navy">Ecobank</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-navy/60">Account Name:</span>
+                    <span className="text-navy/70">Account Name:</span>
                     <span className="font-medium text-navy">
-                      Freeman & Akua Wedding
+                      Freeman Kofi Pabi Osei-Tete
                     </span>
                   </div>
                   <div className="flex justify-between items-center gap-2">
-                    <span className="text-navy/60">Account Number:</span>
+                    <span className="text-navy/70">Account Number:</span>
                     <div className="flex items-center gap-2">
                       <span className="font-medium text-navy font-mono">
-                        XXXXXXXXXXXXXXXX
+                        1441004938914
                       </span>
                       <button
                         onClick={() => copyToClipboard("XXXXXXXXXXXX", "bank")}
@@ -125,8 +115,8 @@ export default function SupportUs() {
                     </div>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-navy/60">Branch:</span>
-                    <span className="font-medium text-navy">Accra</span>
+                    <span className="text-navy/70">Branch:</span>
+                    <span className="font-medium text-navy">McCarthy Hill</span>
                   </div>
                 </div>
               </div>
@@ -135,13 +125,34 @@ export default function SupportUs() {
         </div>
       </section>
 
-      <section className="py-12 text-center bg-off-white">
+      <section className="text-center bg-off-white py-16 pb-32 relative overflow-hidden">
         <a
           href="/"
-          className="inline-block text-burgundy hover:text-navy transition-all font-medium"
+          className="inline-block text-burgundy hover:text-navy transition-all font-medium relative z-10"
         >
           ← Back to Home
         </a>
+
+        <img
+          src="/grass.png"
+          alt="Grass"
+          className="absolute -bottom-28 left-0 w-72 h-72 md:w-84 md:h-84 object-contain opacity-60 z-0"
+        />
+        <img
+          src="/grass.png"
+          alt="Grass"
+          className="absolute -bottom-28 left-84 w-72 h-72 md:w-84 md:h-84 object-contain opacity-60 z-0"
+        />
+        <img
+          src="/grass.png"
+          alt="Grass"
+          className="absolute -bottom-28 left-168 w-72 h-72 md:w-84 md:h-84 object-contain opacity-60 z-0"
+        />
+        <img
+          src="/grass.png"
+          alt="Grass"
+          className="absolute -bottom-28 left-252 w-72 h-72 md:w-84 md:h-84 object-contain opacity-60 z-0"
+        />
       </section>
     </div>
   );

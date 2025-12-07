@@ -166,7 +166,7 @@ export default function Home() {
             </a>
             <a
               href="/program-outline"
-              className="px-8 py-4 border-2 border-burgundy text-burgundy transition-all shadow-lg hover:shadow-xl transform hover:scale-105 transition-all font-medium text-lg"
+              className="px-8 py-4 border-burgundy border-2 text-burgundy transition-all shadow-lg hover:shadow-xl transform hover:scale-105 transition-all font-medium text-lg"
             >
               View Program
             </a>
@@ -274,7 +274,7 @@ export default function Home() {
 
           <a
             href="/our-story"
-            className="text-lg inline-block px-8 py-4 [@media(max-width:430px)]:mt-10 bg-burgundy border-2 text-off-white transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-medium"
+            className="text-lg inline-block px-8 py-4 [@media(max-width:430px)]:mt-10 bg-burgundy text-off-white transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-medium"
           >
             Read Our Love Story
           </a>
@@ -287,6 +287,7 @@ export default function Home() {
           <h2 className="text-3xl sm:text-4xl font-bold text-off-white mb-6">
             Support Us
           </h2>
+
           <p className="text-xl sm:text-2xl font-light text-off-white leading-relaxed mb-12">
             Your presence at our wedding is the greatest gift we could ask for.
             However, if you wish to bless us financially, there are some ways
@@ -298,6 +299,58 @@ export default function Home() {
             className="text-lg inline-block px-8 py-4 bg-burgundy text-off-white transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-medium"
           >
             View Giving Options
+          </a>
+        </div>
+      </section>
+
+      {/* Extra Info */}
+      <section className="py-20 pb-12 text-center bg-off-white relative overflow-hidden">
+        <img
+          src="/plant-13.png"
+          alt="Plant 13"
+          className="absolute -bottom-6 -left-10 w-60 h-60 md:w-72 md:h-72 object-contain opacity-30"
+        />
+
+        <img
+          src="/plant-13-mirrored.png"
+          alt="Plant 13"
+          className="absolute -bottom-6 -right-10 w-60 h-60 md:w-72 md:h-72 object-contain opacity-30"
+        />
+
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-6">
+            Extra Info
+          </h2>
+
+          <p className="text-xl sm:text-2xl font-light text-navy leading-relaxed mb-12">
+            Find extra info in the digital invite below and in the other pages
+            of this website. Please wear jewel tones in these colors:
+          </p>
+
+          <div className="flex flex-col gap-8 mb-12">
+            {/* Top row - 4 circles */}
+            <div className="flex justify-center gap-6">
+              <div className="w-24 h-24 rounded-full bg-w-burgundy shadow-md"></div>
+              <div className="w-24 h-24 rounded-full bg-w-gold shadow-md"></div>
+              <div className="w-24 h-24 rounded-full bg-w-green shadow-md"></div>
+              <div className="w-24 h-24 rounded-full bg-w-blue shadow-md"></div>
+            </div>
+
+            {/* Bottom row - 3 circles */}
+            <div className="flex justify-center gap-6">
+              <div className="w-24 h-24 rounded-full bg-w-silver shadow-md"></div>
+              <div className="w-24 h-24 rounded-full bg-w-pink shadow-md"></div>
+              <div className="w-24 h-24 rounded-full bg-w-purple shadow-md"></div>
+            </div>
+          </div>
+
+          <a
+            href="/digital-wedding-invite.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg inline-block my-4 px-8 py-4 bg-burgundy text-off-white transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-medium"
+          >
+            View Digital Invite
           </a>
         </div>
       </section>
