@@ -83,10 +83,10 @@ export default function Header() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 md:hidden">
-          <div className="h-screen bg-navy flex flex-col items-center justify-center p-8">
+          <div className="h-screen bg-navy flex flex-col items-center justify-center p-8 [@media(max-width:667px)_and_(max-height:500px)]:overflow-y-auto [@media(max-width:667px)_and_(max-height:500px)]:justify-start [@media(max-width:667px)_and_(max-height:500px)]:pt-12">
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="absolute top-6 right-6 text-off-white p-2"
+              className="absolute top-6 right-6 text-off-white p-2 [@media(max-width:667px)_and_(max-height:500px)]:top-2 [@media(max-width:667px)_and_(max-height:500px)]:right-2"
               aria-label="Close menu"
             >
               <svg
@@ -95,7 +95,7 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 strokeWidth={2}
                 stroke="currentColor"
-                className="w-8 h-8"
+                className="w-8 h-8 [@media(max-width:667px)_and_(max-height:500px)]:w-5 [@media(max-width:667px)_and_(max-height:500px)]:h-5"
               >
                 <path
                   strokeLinecap="round"
@@ -105,39 +105,39 @@ export default function Header() {
               </svg>
             </button>
 
-            <div className="flex flex-col items-center gap-8 text-center">
+            <div className="flex flex-col items-center gap-8 text-center [@media(max-width:667px)_and_(max-height:500px)]:gap-4 [@media(max-width:667px)_and_(max-height:500px)]:py-2">
               <a
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-off-white text-3xl hover:text-gold transition-colors"
+                className="text-off-white text-3xl hover:text-gold transition-colors [@media(max-width:667px)_and_(max-height:500px)]:text-xl"
               >
                 Home
               </a>
               <a
                 href="/location"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-off-white text-3xl hover:text-gold transition-colors"
+                className="text-off-white text-3xl hover:text-gold transition-colors [@media(max-width:667px)_and_(max-height:500px)]:text-xl"
               >
                 Location
               </a>
               <a
                 href="/program-outline"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-off-white text-3xl hover:text-gold transition-colors"
+                className="text-off-white text-3xl hover:text-gold transition-colors [@media(max-width:667px)_and_(max-height:500px)]:text-xl"
               >
                 Program
               </a>
               <a
                 href="/our-story"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-off-white text-3xl hover:text-gold transition-colors"
+                className="text-off-white text-3xl hover:text-gold transition-colors [@media(max-width:667px)_and_(max-height:500px)]:text-xl"
               >
                 Our Story
               </a>
               <a
                 href="/support-us"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-off-white text-3xl hover:text-gold transition-colors"
+                className="text-off-white text-3xl hover:text-gold transition-colors [@media(max-width:667px)_and_(max-height:500px)]:text-xl"
               >
                 Support Us
               </a>
@@ -146,14 +146,16 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="mt-4 px-8 py-4 bg-burgundy text-off-white hover:bg-burgundy/80 transition-all text-xl font-medium"
+                className="mt-4 px-8 py-4 bg-burgundy text-off-white hover:bg-burgundy/80 transition-all text-xl font-medium [@media(max-width:667px)_and_(max-height:500px)]:mt-2 [@media(max-width:667px)_and_(max-height:500px)]:px-6 [@media(max-width:667px)_and_(max-height:500px)]:py-2 [@media(max-width:667px)_and_(max-height:500px)]:text-base"
               >
                 RSVP
               </a>
             </div>
 
-            <div className="absolute bottom-8">
-              <span className="text-gold text-2xl">#TeteNyame</span>
+            <div className="absolute bottom-8 [@media(max-width:667px)_and_(max-height:500px)]:bottom-2">
+              <span className="text-gold text-2xl [@media(max-width:667px)_and_(max-height:500px)]:text-lg">
+                #TeteNyame
+              </span>
             </div>
           </div>
         </div>
