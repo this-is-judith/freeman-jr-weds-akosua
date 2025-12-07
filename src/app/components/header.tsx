@@ -8,41 +8,38 @@ export default function Header() {
   return (
     <>
       {/* Header */}
-      <header className="absolute top-0 left-0 right-0 py-6 pl-6 z-10">
+      <header className="md:bg-navy sticky top-0 left-0 right-0 md:py-3.5 py-2 md:pl-4 pl-2 z-50">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-          <a href="/" className="text-navy text-parisienne text-lg">
+          <a
+            href="/"
+            className="md:text-off-white text-navy text-lg hover:text-gold transition-colors font-mediums"
+          >
             #TeteNyame
           </a>
 
           <div className="hidden md:flex items-center gap-10">
-            <nav className="text-black flex text-lg items-center gap-10">
-              <a
-                href="/"
-                className="hover:underline hover:underline-gold underline-offset-6 transition-colors"
-              >
+            <nav className="text-off-white flex text-lg items-center gap-12">
+              <a href="/" className="hover:text-gold transition-colors">
                 Home
               </a>
-              <a
-                href="/location"
-                className="hover:underline underline-offset-6 transition-colors"
-              >
+              <a href="/location" className="hover:text-gold transition-colors">
                 Location
               </a>
               <a
                 href="/program-outline"
-                className="hover:underline underline-offset-6 transition-colors"
+                className="hover:text-gold transition-colors"
               >
                 Program
               </a>
               <a
                 href="/our-story"
-                className="hover:underline underline-offset-6 transition-colors"
+                className="hover:text-gold transition-colors"
               >
                 Our Story
               </a>
               <a
                 href="/support-us"
-                className="hover:underline underline-offset-6 transition-colors"
+                className="hover:text-gold transition-colors"
               >
                 Support Us
               </a>
@@ -52,7 +49,7 @@ export default function Header() {
               href="https://docs.google.com/forms/d/e/1FAIpQLSeeNSv_qwW1VjnVttcrXQkKNjX45sboA6ebJBYLP6ok1rwt4g/viewform"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-burgundy text-off-white hover:bg-burgundy/80 transition-all shadow-md hover:shadow-lg font-medium"
+              className="px-6 py-3 bg-burgundy text-off-white hover:scale-105 transform transition-all font-medium"
             >
               RSVP
             </a>

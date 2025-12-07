@@ -9,10 +9,22 @@ export default function Location() {
     "https://maps.apple.com/?q=Living+Word+Assemblies+of+God+Church+Kwashieman+Accra+Ghana";
 
   return (
-    <div className="min-h-screen bg-off-white">
-      <section className="py-20 md:pt-40 pt-30 text-center">
+    <div className="min-h-screen bg-off-white relative overflow-hidden">
+      <section className="py-16 md:pt-28 pt-20 text-center">
+        <img
+          src="/plant-17.png"
+          alt="Plant 17"
+          className="absolute -top-8 -right-16 w-72 h-72 md:w-84 md:h-84 object-contain opacity-60"
+        />
+
+        <img
+          src="/plant-17.png"
+          alt="Plant 17"
+          className="absolute -top-8 -left-16 w-72 h-72 md:w-84 md:h-84 object-contain opacity-60"
+        />
+
         <div className="max-w-4xl mx-auto px-4">
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+          <div className="bg-white border-1 border-navy shadow-lg p-8 mb-8">
             <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-4">
               {churchName}
             </h2>
@@ -23,7 +35,7 @@ export default function Location() {
                 href={googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-burgundy text-white hover:bg-burgundy/90 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-medium"
+                className="inline-flex items-center justify-center px-8 py-4 bg-burgundy text-off-white hover:bg-burgundy/90 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-medium"
               >
                 <svg
                   className="w-5 h-5 mr-2"
@@ -38,7 +50,7 @@ export default function Location() {
                 href={appleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-burgundy text-burgundy hover:bg-navy hover:text-white hover:border-navy transition-all font-medium"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-burgundy text-burgundy hover:bg-navy hover:text-off-white transition-all font-medium"
               >
                 <svg
                   className="w-5 h-5 mr-2"
@@ -67,7 +79,7 @@ export default function Location() {
 
           <a
             href="/"
-            className="inline-block px-8 py-4 pb-2 text-burgundy hover:text-navy transition-all font-medium"
+            className="inline-block px-8 py-4 text-burgundy hover:text-navy transition-all font-medium"
           >
             ← Back to Home
           </a>

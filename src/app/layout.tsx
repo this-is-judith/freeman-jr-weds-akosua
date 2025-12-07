@@ -7,6 +7,8 @@ import {
   Lora,
   Imperial_Script,
   Cookie,
+  Parisienne,
+  Carattere,
 } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
@@ -52,6 +54,18 @@ const cookie = Cookie({
   weight: ["400"],
 });
 
+const parisienne = Parisienne({
+  variable: "--font-parisienne",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const carattere = Carattere({
+  variable: "--font-carattere",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 export const metadata: Metadata = {
   title: "Tete & Nyame — Wedding",
   description: "Timeless modern elegance. #TeteNyame",
@@ -65,7 +79,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} ${comicNeue.variable} ${lora.variable} ${imperialScript.variable} ${cookie.variable} antialiased bg-off-white text-foreground font-sans`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} ${comicNeue.variable} ${lora.variable} ${imperialScript.variable} ${cookie.variable} ${parisienne.variable} ${carattere.variable} antialiased bg-off-white text-foreground font-sans`}
       >
         {/* Header */}
         <Header />

@@ -70,7 +70,10 @@ body {
 
 /* Font helpers */
 .font-parisienne {
-  font-family: var(--font-comic-neue);
+  font-family: var(--font-parisienne);
+}
+.font-carattere {
+  font-family: var(--font-carattere);
 }
 .font-dancing-script {
   font-family: var(--font-dancing-script);

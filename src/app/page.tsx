@@ -10,6 +10,24 @@ export default function Home() {
     seconds: 0,
   });
 
+  const [displayedText, setDisplayedText] = useState("");
+  const fullText =
+    "Dear Sir or Madam, Join Freeman and Akosua as they get married on December 27. Click the button below to fill a form that let's us know how many people are coming";
+
+  useEffect(() => {
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      if (index <= fullText.length) {
+        setDisplayedText(fullText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, 50);
+
+    return () => clearInterval(typingInterval);
+  }, []);
+
   useEffect(() => {
     // Wedding date - December 27, 2025
     const weddingDate = new Date("2025-12-27T11:00:00").getTime();
@@ -47,88 +65,112 @@ export default function Home() {
       </section>
 
       {/* Main Info Section */}
-      <section className="bg-off-white text-navy text-center py-16">
-        <h2 className="md:text-5xl font-medium text-4xl mb-8 max-w-4xl mx-auto px-4">
-          Freeman Osei-Tete Jr.
-        </h2>
+      <section className="bg-off-white text-navy text-center py-16 relative overflow-hidden">
+        {/* Decorative Plants */}
+        <img
+          src="/plant-1.png"
+          alt="Plant 1"
+          className="absolute -bottom-1 left-0 w-48 h-48 md:w-64 md:h-64 object-contain opacity-30 -rotate-12"
+        />
+        <img
+          src="/plant-1-mirrored.png"
+          alt="Plant 1"
+          className="absolute -bottom-1 right-0 w-48 h-48 md:w-64 md:h-64 object-contain opacity-30 rotate-12"
+        />
+        <img
+          src="/plant-11-left.png"
+          alt="Plant 11"
+          className="absolute top-0 -left-15 w-96 h-96 md:w-108 md:h-108 object-contain opacity-30"
+        />
+        <img
+          src="/plant-11-right.png"
+          alt="Plant 11"
+          className="absolute top-0 -right-15 w-120 h-120 md:w-108 md:h-108 object-contain opacity-30"
+        />
 
-        <p className="text-2xl max-w-3xl mx-auto mb-8">and</p>
+        <div className="relative z-10">
+          <h2 className="md:text-7xl font-carattere text-4xl mb-8 max-w-4xl mx-auto px-4">
+            Freeman Osei-Tete Jr.
+          </h2>
 
-        <h2 className="md:text-5xl font-medium text-4xl mb-8 max-w-4xl mx-auto">
-          Dr. Akosua Ndwaa Nyamekye
-        </h2>
+          <p className="text-2xl max-w-3xl mx-auto mb-8">and</p>
 
-        <p className="text-2xl max-w-3xl mx-auto mb-8">
-          are getting married in
-        </p>
+          <h2 className="md:text-7xl font-carattere text-4xl mb-8 max-w-4xl mx-auto">
+            Dr. Akosua Ndwaa Nyamekye
+          </h2>
 
-        {/* Countdown Timer */}
-        <div className="flex justify-center gap-4 sm:gap-8 mb-16">
-          {[
-            { value: timeLeft.days, label: "Days" },
-            { value: timeLeft.hours, label: "Hours" },
-            { value: timeLeft.minutes, label: "Minutes" },
-            { value: timeLeft.seconds, label: "Seconds" },
-          ].map((item, idx) => (
-            <div key={idx} className="text-center">
-              <div className="border-navy bg-off-white p-4 sm:p-6 border shadow-lg min-w-[70px] sm:min-w-[90px]">
-                <p className="text-3xl sm:text-5xl font-bold text-navy font-mono">
-                  {item.value.toString().padStart(2, "0")}
+          <p className="text-2xl max-w-3xl mx-auto mb-8">
+            are getting married in
+          </p>
+
+          {/* Countdown Timer */}
+          <div className="flex justify-center gap-4 sm:gap-8 mb-16">
+            {[
+              { value: timeLeft.days, label: "Days" },
+              { value: timeLeft.hours, label: "Hours" },
+              { value: timeLeft.minutes, label: "Minutes" },
+              { value: timeLeft.seconds, label: "Seconds" },
+            ].map((item, idx) => (
+              <div key={idx} className="text-center">
+                <div className="border-navy bg-off-white p-4 sm:p-6 border shadow-lg min-w-[70px] sm:min-w-[90px]">
+                  <p className="text-3xl sm:text-5xl font-bold text-navy font-mono">
+                    {item.value.toString().padStart(2, "0")}
+                  </p>
+                </div>
+                <p className="mt-2 text-xs sm:text-sm text-navy uppercase tracking-wider">
+                  {item.label}
                 </p>
               </div>
-              <p className="mt-2 text-xs sm:text-sm text-navy uppercase tracking-wider">
-                {item.label}
+            ))}
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-center gap-12 max-w-4xl mx-auto px-6 mb-8">
+            <div className="flex-1 text-center">
+              <h3 className="text-xs uppercase tracking-widest text-burgundy mb-3 font-light">
+                Date
+              </h3>
+              <p className="text-2xl text-navy font-light">December 27, 2025</p>
+            </div>
+
+            <div className="flex-1 text-center border-l border-r border-navy/50 md:block hidden">
+              <h3 className="text-xs uppercase tracking-widest text-burgundy mb-3 font-light">
+                Time
+              </h3>
+              <p className="text-2xl text-navy font-light">11:00 AM</p>
+            </div>
+
+            <div className="flex-1 text-center md:hidden">
+              <h3 className="text-xs uppercase tracking-widest text-burgundy mb-3 font-light">
+                Time
+              </h3>
+              <p className="text-2xl text-navy font-light">11:00 AM</p>
+            </div>
+
+            <div className="flex-1 text-center">
+              <h3 className="text-xs uppercase tracking-widest text-burgundy mb-3 font-light">
+                Location
+              </h3>
+              <p className="text-2xl text-navy font-light">Living Word AG</p>
+              <p className="text-sm text-navy/60 mt-1 font-light">
+                Kwashieman, Accra
               </p>
             </div>
-          ))}
-        </div>
-
-        <div className="flex flex-col md:flex-row justify-center gap-12 max-w-4xl mx-auto px-6 mb-8">
-          <div className="flex-1 text-center">
-            <h3 className="text-xs uppercase tracking-widest text-burgundy mb-3 font-light">
-              Date
-            </h3>
-            <p className="text-2xl text-navy font-light">December 27, 2025</p>
           </div>
 
-          <div className="flex-1 text-center border-l border-r border-navy/50 md:block hidden">
-            <h3 className="text-xs uppercase tracking-widest text-burgundy mb-3 font-light">
-              Time
-            </h3>
-            <p className="text-2xl text-navy font-light">11:00 AM</p>
+          <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4 [@media(max-width:640px)]:px-16">
+            <a
+              href="/location"
+              className="px-8 py-4 bg-burgundy text-off-white transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-medium text-lg"
+            >
+              Find Location
+            </a>
+            <a
+              href="/program-outline"
+              className="px-8 py-4 border-2 border-burgundy text-burgundy transition-all shadow-lg hover:shadow-xl transform hover:scale-105 transition-all font-medium text-lg"
+            >
+              View Program
+            </a>
           </div>
-
-          <div className="flex-1 text-center md:hidden">
-            <h3 className="text-xs uppercase tracking-widest text-burgundy mb-3 font-light">
-              Time
-            </h3>
-            <p className="text-2xl text-navy font-light">11:00 AM</p>
-          </div>
-
-          <div className="flex-1 text-center">
-            <h3 className="text-xs uppercase tracking-widest text-burgundy mb-3 font-light">
-              Location
-            </h3>
-            <p className="text-2xl text-navy font-light">Living Word AG</p>
-            <p className="text-sm text-navy/60 mt-1 font-light">
-              Kwashieman, Accra
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4 [@media(max-width:640px)]:px-16">
-          <a
-            href="/location"
-            className="px-8 py-4 bg-burgundy text-off-white transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-medium text-lg"
-          >
-            Find Location
-          </a>
-          <a
-            href="/program-outline"
-            className="px-8 py-4 border-2 border-burgundy text-burgundy transition-all shadow-lg hover:shadow-xl transform hover:scale-105 transition-all font-medium text-lg"
-          >
-            View Program
-          </a>
         </div>
       </section>
 
@@ -143,34 +185,11 @@ export default function Home() {
             let us know if you can attend by RSVPing below.
           </p>
 
-          {/* RSVP Scroll/Parchment */}
-          <div className="max-w-xs mx-auto mb-12">
-            <div className="relative bg-gradient-to-br from-amber-50 to-amber-100 rounded-lg shadow-2xl p-8 border-4 border-amber-800/30 h-64">
-              {/* Decorative corners */}
-              <div className="absolute top-2 left-2 w-8 h-8 border-t-2 border-l-2 border-amber-800/40"></div>
-              <div className="absolute top-2 right-2 w-8 h-8 border-t-2 border-r-2 border-amber-800/40"></div>
-              <div className="absolute bottom-2 left-2 w-8 h-8 border-b-2 border-l-2 border-amber-800/40"></div>
-              <div className="absolute bottom-2 right-2 w-8 h-8 border-b-2 border-r-2 border-amber-800/40"></div>
-
-              {/* Parchment lines */}
-              <div className="space-y-6">
-                <div className="h-1 bg-amber-900/20 rounded w-full"></div>
-                <div className="h-1 bg-amber-900/20 rounded w-5/6 mx-auto"></div>
-                <div className="h-1 bg-amber-900/20 rounded w-full"></div>
-                <div className="h-1 bg-amber-900/20 rounded w-4/5 mx-auto"></div>
-                <div className="h-1 bg-amber-900/20 rounded w-full"></div>
-                <div className="h-1 bg-amber-900/20 rounded w-5/6 mx-auto"></div>
-                <div className="h-1 bg-amber-900/20 rounded w-full"></div>
-                <div className="h-1 bg-amber-900/20 rounded w-3/4 mx-auto"></div>
-              </div>
-            </div>
-          </div>
-
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSeeNSv_qwW1VjnVttcrXQkKNjX45sboA6ebJBYLP6ok1rwt4g/viewform"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lg inline-block px-8 py-4 bg-burgundy text-off-white hover:bg-burgundy/90 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-medium"
+            className="text-lg inline-block px-8 py-4 bg-burgundy text-off-white shadow-lg hover:shadow-xl transform hover:scale-105 font-medium"
           >
             RSVP
           </a>
@@ -178,12 +197,24 @@ export default function Home() {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20 text-center bg-off-white relative overflow-visible">
+      <section className="py-20 text-center bg-off-white relative overflow-hidden">
+        <img
+          src="/plant-12-mirrored.png"
+          alt="Plant 12"
+          className="absolute -bottom-6 -right-10 w-72 h-72 md:w-84 md:h-84 object-contain opacity-30"
+        />
+
+        <img
+          src="/plant-12.png"
+          alt="Plant 12"
+          className="absolute -bottom-8 -left-10 w-72 h-72 md:w-84 md:h-84 object-contain opacity-30"
+        />
+
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-6">
             Our Story
           </h2>
-          <p className="text-xl sm:text-2xl font-light text-navy leading-relaxed md:mb-24 mb-16">
+          <p className="text-xl sm:text-2xl font-light text-navy leading-relaxed md:mb-16 mb-16">
             Our story began in August 2022, when a chance encounter turned into
             something extraordinary. From that first conversation, we knew there
             was something special between us.
@@ -243,7 +274,7 @@ export default function Home() {
 
           <a
             href="/our-story"
-            className="text-lg inline-block px-8 py-4 [@media(max-width:430px)]:mt-10 bg-off-white border-2 border-burgundy text-burgundy transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-medium"
+            className="text-lg inline-block px-8 py-4 [@media(max-width:430px)]:mt-10 bg-burgundy border-2 text-off-white transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-medium"
           >
             Read Our Love Story
           </a>
@@ -261,6 +292,7 @@ export default function Home() {
             However, if you wish to bless us financially, there are some ways
             you can support our wedding and marriage.
           </p>
+
           <a
             href="/support-us"
             className="text-lg inline-block px-8 py-4 bg-burgundy text-off-white transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-medium"
