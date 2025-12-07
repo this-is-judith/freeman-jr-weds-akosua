@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <>
       {/* Header */}
-      <header className="bg-navy sticky top-0 left-0 right-0 md:py-3.5 py-1 md:pl-4 pl-1 z-50">
+      <header className="bg-navy sticky top-0 left-0 right-0 md:py-3.5 py-2 md:pl-4 pl-1 z-50">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
           <a
             href="/"
