@@ -95,7 +95,7 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto px-4">
             <p className="text-3xl text-off-white mb-4">#TeteNyame</p>
 
-            <p className="text-sm mb-4">
+            <p className="text-sm text-off-white mb-4">
               Made with ❤️ for Freeman Osei-Tete Jr. & Dr. Akosua Ndwaa Nyamekye
             </p>
           </div>
