@@ -218,7 +218,7 @@ export default function Home() {
             Our Story
           </h2>
           <p className="md:text-2xl text-xl font-light text-navy leading-relaxed md:mb-16 mb-12">
-            Our story officially began in March 2023, but God had been preparing
+            Our story officially began in March 2024, but God had been preparing
             the way long before then. Follow our journey, and see how
             beautifully He guided our steps toward each other.
           </p>
