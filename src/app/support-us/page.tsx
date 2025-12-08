@@ -16,7 +16,7 @@ export default function SupportUs() {
       {/* Gift Options */}
       <section className="md:pt-24 pt-15 relative overflow-hidden">
         <div className="max-w-6xl mx-auto md:px-4 px-2">
-          <div className="grid lg:grid-cols-[1fr_1.5fr] md:grid-cols-2 gap-12">
+          <div className="grid xl:grid-cols-[1fr_1.5fr] [@media(min-width:1280px)]:grid-cols-2 gap-12">
             {/* Mobile Money */}
             <div className="bg-white border-1 border-navy shadow-lg md:p-8 p-4">
               <h2 className="text-2xl font-bold text-navy text-center md:mb-6 mb-4">

@@ -54,7 +54,7 @@ export default function ProgramOutline() {
 
   return (
     <div className="bg-off-white">
-      <section className="md:pt-28 pt-20 relative overflow-hidden">
+      <section className="min-h-screen md:pt-28 pt-20 relative overflow-hidden flex flex-col">
         <img
           src="/plant-8.png"
           alt="Plant 8"
@@ -67,8 +67,8 @@ export default function ProgramOutline() {
           className="absolute md:-top-4 -top-18 md:-left-16 -left-12 w-48 h-48 md:w-84 md:h-84 object-contain opacity-100"
         />
 
-        <div className="max-w-3xl mx-auto px-4">
-          <div className="bg-white border-1 border-navy shadow-xl p-8 sm:p-12">
+        <div className="max-w-3xl mx-auto px-4 flex-1 flex flex-col">
+          <div className="bg-white border-1 border-navy shadow-xl p-8 sm:p-12 flex-1 flex flex-col items-center justify-center">
             <div className="text-center mb-12 pb-8 border-b-2 border-navy/10">
               <h1 className="text-2xl sm:text-4xl font-bold text-navy mb-3">
                 Order of Events

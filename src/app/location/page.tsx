@@ -10,7 +10,7 @@ export default function Location() {
 
   return (
     <div className="bg-off-white relative overflow-hidden">
-      <section className="md:pt-28 pt-20 text-center">
+      <section className="md:pt-28 pt-20 [@media(width=768px)]:pt-64 text-center [@media(width>=820px)_and_(height>=1000px)]:min-h-screen [@media(width>=820px)_and_(height>=1000px)]:flex [@media(width>=820px)_and_(height>=1000px)]:flex-col [@media(width>=820px)_and_(height>=1000px)]:justify-center">
         <img
           src="/plant-17.png"
           alt="Plant 17"
@@ -23,8 +23,8 @@ export default function Location() {
           className="absolute md:-top-8 -top-18 md:-left-16 -left-12 w-48 h-48 md:w-72 md:h-72 md:w-84 md:h-84 object-contain opacity-100"
         />
 
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="bg-white border-1 border-navy shadow-lg p-8">
+        <div className="max-w-4xl mx-auto px-4 [@media(width>=820px)_and_(height>=1000px)]:flex-1 [@media(width>=820px)_and_(height>=1000px)]:flex [@media(width>=820px)_and_(height>=1000px)]:flex-col [@media(width>=820px)_and_(height>=1000px)]:justify-center">
+          <div className="bg-white border-1 border-navy shadow-lg p-8 [@media(width>=820px)_and_(height>=1000px)]:flex-1 [@media(width>=820px)_and_(height>=1000px)]:flex [@media(width>=820px)_and_(height>=1000px)]:flex-col [@media(width>=820px)_and_(height>=1000px)]:justify-center">
             <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-4 md:pt-0 pt-4">
               {churchName}
             </h2>

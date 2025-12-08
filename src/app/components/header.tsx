@@ -17,7 +17,7 @@ export default function Header() {
             #TeteNyame
           </a>
 
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-10 [@media(max-width:820px)]:hidden">
             <nav className="text-off-white flex text-lg items-center gap-12">
               <a href="/" className="hover:text-gold transition-colors">
                 Home
@@ -55,7 +55,7 @@ export default function Header() {
             </a>
           </div>
 
-          <div className="md:hidden">
+          <div className="[@media(min-width:821px)]:hidden">
             <button
               onClick={() => setMobileMenuOpen(true)}
               className="text-off-white p-2"
@@ -82,7 +82,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 md:hidden">
+        <div className="fixed inset-0 z-50 [@media(min-width:821px)]:hidden">
           <div className="h-screen bg-navy flex flex-col items-center justify-center p-8 [@media(max-width:667px)_and_(max-height:500px)]:overflow-y-auto [@media(max-width:667px)_and_(max-height:500px)]:justify-start [@media(max-width:667px)_and_(max-height:500px)]:pt-12">
             <button
               onClick={() => setMobileMenuOpen(false)}
