@@ -111,7 +111,7 @@ export default function SupportUs() {
                         1441004938914
                       </span>
                       <button
-                        onClick={() => copyToClipboard("XXXXXXXXXXXX", "bank")}
+                        onClick={() => copyToClipboard("1441004938914", "bank")}
                         className="px-3 py-1 text-xs bg-burgundy text-white hover:bg-burgundy/90 transition-all"
                       >
                         {copiedField === "bank" ? "Copied!" : "Copy"}

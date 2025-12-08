@@ -219,8 +219,8 @@ export default function Home() {
           </h2>
           <p className="md:text-2xl text-xl font-light text-navy leading-relaxed md:mb-16 mb-12">
             Our story officially began in March 2023, but God had been preparing
-            the way long before then. Follow our jouney, and see how beautifully
-            He guided our steps toward each other.
+            the way long before then. Follow our journey, and see how
+            beautifully He guided our steps toward each other.
           </p>
 
           {/* Scattered Polaroid Photos */}
@@ -327,7 +327,7 @@ export default function Home() {
 
           <p className="md:text-2xl text-xl font-light text-navy leading-relaxed mb-12">
             Find extra info in the digital invite below and in the other pages
-            of this website. Please wear jewel tones in these colors:
+            of this website. Please wear jewel tones in any of these colors:
           </p>
 
           <div className="flex flex-col gap-8 mb-12">
