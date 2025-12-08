@@ -67,8 +67,8 @@ const carattere = Carattere({
 });
 
 export const metadata: Metadata = {
-  title: "Tete & Nyame — Wedding",
-  description: "Timeless modern elegance. #TeteNyame",
+  title: "Tete Nyame",
+  description: "Freeman Weds Akosua ❤️",
 };
 
 export default function RootLayout({
@@ -78,6 +78,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} ${comicNeue.variable} ${lora.variable} ${imperialScript.variable} ${cookie.variable} ${parisienne.variable} ${carattere.variable} antialiased bg-off-white text-foreground font-sans`}
       >
