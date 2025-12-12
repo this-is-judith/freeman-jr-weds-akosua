@@ -30,7 +30,7 @@ export default function Home() {
 
   useEffect(() => {
     // Wedding date - December 27, 2025
-    const weddingDate = new Date("2025-12-27T11:00:00").getTime();
+    const weddingDate = new Date("2025-12-27T11:00:00Z").getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
