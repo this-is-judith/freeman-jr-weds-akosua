@@ -134,7 +134,73 @@ export default function OurStory() {
               Freeman's Diary
             </h2>
             <div className="space-y-4 text-navy text-lg">
-              <p className="leading-relaxed text-center">Coming soon 👀</p>
+              <p className="leading-relaxed italic text-burgundy">
+                Dear diary,
+              </p>
+              <p className="leading-relaxed">
+                Every couple has a unique love story, and ours is nothing short
+                of a masterful display of predestination.
+              </p>
+
+              <p className="leading-relaxed">
+                On Pastor’s Appreciation Day 2023, unbeknownst to me, the woman
+                I would soon call my wife had divinely made her way into the
+                church for the very first time. The programme was good, but I
+                did not notice the new eyes that saw me until the day after. As
+                a Christian with the understanding that marriage is a covenant
+                never to be exited once entered, I had promised God and myself
+                that I would rather remain single than be with someone who
+                lacked the qualities I was looking for. Not a perfect being, but
+                a box-ticker.
+              </p>
+
+              <p className="leading-relaxed">
+                After I met my fiancée (wife after the 27th! 😁), the long list
+                of traits I had quietly hidden in my heart suddenly felt short.
+                She ticked the boxes, created new ones, and ticked those too. I
+                had revised this list countless times and now realize that God
+                was simply describing Ndwaa to me all along. I knew I would
+                recognize the woman of my dreams when I met her, and I did.
+              </p>
+
+              <p className="leading-relaxed">
+                In a heartbeat, I fell for her. But of course, I had decided I
+                could not date. Then again, God’s plans are not ours 🙈. I took
+                particular notice of her on New Year’s Eve 2024. I still
+                remember the white and black dress, with the WGHS sash draped
+                across her neck. Shush 🤫 it wasn’t really about the sash, but
+                about the plethora of qualities she possesses. Still, the sash
+                read: “Live right, speak true, right wrong, follow the King.” I
+                saw all of these in her.
+              </p>
+
+              <p className="leading-relaxed">
+                These qualities became even more evident the more we talked. In
+                the Sunday School class I taught, she overcame her natural
+                introversion to share her thoughts — seasoned with wisdom and
+                understanding — which revealed her depth of Scripture. She was
+                bold. She was different. Different enough to make me break my
+                personal rule of “no dating in the same church.” And on
+                21/03/24, I asked her out. Her “yes” came from a place of mutual
+                feeling — and it was the best feeling ever!
+              </p>
+
+              <p className="leading-relaxed">
+                Here comes the twist: I’ll stop my POV here, because if I
+                continue, John 21:25 would happen to this piece. If you need a
+                reference to know what that means, perhaps you should attend
+                Sunday School a bit more 😉. All thanks and glory to the Ancient
+                God. Only He could make it possible for Osei-Tete and Nyamekye
+                to display His glory.
+              </p>
+
+              <p>#TeteNyame2025</p>
+
+              <p className="leading-relaxed italic text-burgundy">
+                With love,
+                <br />
+                Freeman
+              </p>
             </div>
           </div>
 
