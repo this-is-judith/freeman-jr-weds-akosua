@@ -4,16 +4,6 @@ export default function ProgramOutline() {
       {/* Mobile version - cropped images */}
       <div className="md:hidden">
         <img
-          src="/wedding-brochure-1-cropped-left.png"
-          alt="Wedding Program Outline - Page 1 Left"
-          className="w-full h-auto block"
-        />
-        <img
-          src="/wedding-brochure-1-cropped-middle.png"
-          alt="Wedding Program Outline - Page 1 Middle"
-          className="w-full h-auto block"
-        />
-        <img
           src="/wedding-brochure-1-cropped-right.png"
           alt="Wedding Program Outline - Page 1 Right"
           className="w-full h-auto block"
@@ -29,8 +19,18 @@ export default function ProgramOutline() {
           className="w-full h-auto block"
         />
         <img
+          src="/wedding-brochure-1-cropped-left.png"
+          alt="Wedding Program Outline - Page 1 Left"
+          className="w-full h-auto block"
+        />
+        <img
           src="/wedding-brochure-2-cropped-right.png"
           alt="Wedding Program Outline - Page 2 Right"
+          className="w-full h-auto block"
+        />
+        <img
+          src="/wedding-brochure-1-cropped-middle.png"
+          alt="Wedding Program Outline - Page 1 Middle"
           className="w-full h-auto block"
         />
       </div>
