@@ -235,12 +235,12 @@ export default function OurStory() {
                 <div className="bg-gray-200 overflow-hidden shadow-md aspect-square">
                   <img
                     src="/freeman-and-akosua-p1.jpg"
-                    alt="Engagement Photo"
+                    alt="Pre-wedding Photoshoot"
                     className="w-full h-full object-cover object-[center_20%]"
                   />
                 </div>
                 <p className="text-sm text-navy text-center italic">
-                  Engagement Photo
+                  Pre-wedding Photoshoot
                 </p>
               </div>
 
@@ -249,12 +249,12 @@ export default function OurStory() {
                 <div className="bg-gray-200 overflow-hidden shadow-md aspect-square">
                   <img
                     src="/freeman-and-akosua-p2.jpg"
-                    alt="Engagement Photo"
+                    alt="Pre-wedding Photoshoot"
                     className="w-full h-full object-cover object-[center_30%]"
                   />
                 </div>
                 <p className="text-sm text-navy text-center italic">
-                  Engagement Photo
+                  Pre-wedding Photoshoot
                 </p>
               </div>
 
@@ -263,12 +263,12 @@ export default function OurStory() {
                 <div className="bg-gray-200 overflow-hidden shadow-md aspect-square">
                   <img
                     src="/freeman-and-akosua-p3.jpg"
-                    alt="Engagement Photo"
+                    alt="Pre-wedding Photoshoot"
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
                 <p className="text-sm text-navy text-center italic">
-                  Engagement Photo
+                  Pre-wedding Photoshoot
                 </p>
               </div>
 
@@ -277,12 +277,12 @@ export default function OurStory() {
                 <div className="bg-gray-200 overflow-hidden shadow-md aspect-square">
                   <img
                     src="/freeman-and-akosua-p4.jpg"
-                    alt="Engagement Photo"
+                    alt="Pre-wedding Photoshoot"
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
                 <p className="text-sm text-navy text-center italic">
-                  Engagement Photo
+                  Pre-wedding Photoshoot
                 </p>
               </div>
 
