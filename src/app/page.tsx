@@ -347,14 +347,24 @@ export default function Home() {
             </div>
           </div>
 
-          <a
-            href="/digital-wedding-invite.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-lg inline-block my-4 px-8 py-4 bg-burgundy text-off-white transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-medium"
-          >
-            View Digital Invite
-          </a>
+          <div className="md:mt-12 mt-10 flex flex-col sm:flex-row justify-center gap-4 [@media(max-width:640px)]:px-16">
+            <a
+              href="/wedding-brochure.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-burgundy text-off-white transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-medium text-lg"
+            >
+              View Wedding Brochure
+            </a>
+            <a
+              href="/digital-wedding-invite.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 border-burgundy border-2 text-burgundy transition-all shadow-lg hover:shadow-xl transform hover:scale-105 transition-all font-medium text-lg"
+            >
+              View Digital Invite
+            </a>
+          </div>
         </div>
       </section>
     </>
