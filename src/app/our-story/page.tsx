@@ -234,6 +234,58 @@ export default function OurStory() {
               <div className="space-y-2">
                 <div className="bg-gray-200 overflow-hidden shadow-md aspect-square">
                   <img
+                    src="/engagement-photo-1.jpg"
+                    alt="Engagement Photo"
+                    className="w-full h-full object-cover object-[center_0%]"
+                  />
+                </div>
+                <p className="text-sm text-navy text-center italic">
+                  Engagement Photo
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <div className="bg-gray-200 overflow-hidden shadow-md aspect-square">
+                  <img
+                    src="/engagement-photo-2.jpg"
+                    alt="Engagement Photo"
+                    className="w-full h-full object-cover object-[center_20%]"
+                  />
+                </div>
+                <p className="text-sm text-navy text-center italic">
+                  Engagement Photo
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <div className="bg-gray-200 overflow-hidden shadow-md aspect-square">
+                  <img
+                    src="/engagement-photo-3.jpg"
+                    alt="Engagement Photo"
+                    className="w-full h-full object-cover object-[center_20%]"
+                  />
+                </div>
+                <p className="text-sm text-navy text-center italic">
+                  Engagement Photo
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <div className="bg-gray-200 overflow-hidden shadow-md aspect-square">
+                  <img
+                    src="/engagement-photo-4.jpg"
+                    alt="Engagement Photo"
+                    className="w-full h-full object-cover object-[center_20%]"
+                  />
+                </div>
+                <p className="text-sm text-navy text-center italic">
+                  Engagement Photo
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <div className="bg-gray-200 overflow-hidden shadow-md aspect-square">
+                  <img
                     src="/freeman-and-akosua-p1.jpg"
                     alt="Pre-wedding Photoshoot"
                     className="w-full h-full object-cover object-[center_20%]"
