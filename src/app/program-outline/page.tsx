@@ -1,133 +1,51 @@
 export default function ProgramOutline() {
-  // const ceremonyEvents = [
-  //   {
-  //     time: "11:00 AM",
-  //     title: "Guest Arrival & Seating",
-  //   },
-  //   {
-  //     time: "11:30 AM",
-  //     title: "Processional",
-  //   },
-  //   {
-  //     time: "11:45 AM",
-  //     title: "Ceremony Begins",
-  //   },
-  //   {
-  //     time: "12:15 PM",
-  //     title: "Unity Ceremony",
-  //   },
-  //   {
-  //     time: "12:30 PM",
-  //     title: "Pronouncement",
-  //   },
-  // ];
-
-  // const receptionEvents = [
-  //   {
-  //     time: "1:00 PM",
-  //     title: "Cocktail Hour",
-  //   },
-  //   {
-  //     time: "2:00 PM",
-  //     title: "Grand Entrance",
-  //   },
-  //   {
-  //     time: "2:30 PM",
-  //     title: "Dinner Service",
-  //   },
-  //   {
-  //     time: "4:00 PM",
-  //     title: "Toasts & Speeches",
-  //   },
-  //   {
-  //     time: "4:30 PM",
-  //     title: "First Dance",
-  //   },
-  //   {
-  //     time: "5:00 PM",
-  //     title: "Cake Cutting",
-  //   },
-  //   { time: "5:30 PM", title: "Open Dancing" },
-  // ];
-
-  // const allEvents = [...ceremonyEvents, ...receptionEvents];
-
   return (
-    <div className="bg-off-white">
-      <section className="min-h-screen md:pt-28 pt-20 relative overflow-hidden flex flex-col">
+    <div className="w-full bg-off-white">
+      {/* Mobile version - cropped images */}
+      <div className="md:hidden">
         <img
-          src="/plant-8.png"
-          alt="Plant 8"
-          className="absolute md:-top-4 -top-18 md:-right-16 -right-12 w-48 h-48 md:w-84 md:h-84 object-contain opacity-100"
+          src="/wedding-brochure-1-cropped-left.png"
+          alt="Wedding Program Outline - Page 1 Left"
+          className="w-full h-auto block"
         />
-
         <img
-          src="/plant-8.png"
-          alt="Plant 8"
-          className="absolute md:-top-4 -top-18 md:-left-16 -left-12 w-48 h-48 md:w-84 md:h-84 object-contain opacity-100"
+          src="/wedding-brochure-1-cropped-middle.png"
+          alt="Wedding Program Outline - Page 1 Middle"
+          className="w-full h-auto block"
         />
+        <img
+          src="/wedding-brochure-1-cropped-right.png"
+          alt="Wedding Program Outline - Page 1 Right"
+          className="w-full h-auto block"
+        />
+        <img
+          src="/wedding-brochure-2-cropped-left.png"
+          alt="Wedding Program Outline - Page 2 Left"
+          className="w-full h-auto block"
+        />
+        <img
+          src="/wedding-brochure-2-cropped-middle.png"
+          alt="Wedding Program Outline - Page 2 Middle"
+          className="w-full h-auto block"
+        />
+        <img
+          src="/wedding-brochure-2-cropped-right.png"
+          alt="Wedding Program Outline - Page 2 Right"
+          className="w-full h-auto block"
+        />
+      </div>
 
-        <div className="max-w-3xl mx-auto px-4 flex-1 flex flex-col">
-          <div className="bg-white border-1 border-navy shadow-xl p-8 sm:p-12 flex-1 flex flex-col items-center justify-center">
-            <div className="text-center mb-12 pb-8 border-b-2 border-navy/10">
-              <h1 className="text-2xl sm:text-4xl font-bold text-navy mb-3">
-                Order of Events
-              </h1>
-              <p className="text-lg text-navy/70">December 27, 2025</p>
-              <p className="text-sm text-navy/60 mt-2">
-                Living Word Assemblies of God Church
-              </p>
-            </div>
-
-            <div className="text-center md:py-12 py-8">
-              <p className="text-xl text-navy/80 mb-4">
-                The program outline will be released shortly.
-              </p>
-              <p className="text-lg text-navy/60">
-                Please stay tuned for updates!
-              </p>
-            </div>
-
-            {/* Commented out until program outline is finalized */}
-            {/* <div className="space-y-1">
-              {allEvents.map((event, idx) => (
-                <div
-                  key={idx}
-                  className="py-4 border-b border-navy/10 last:border-0"
-                >
-                  <div className="flex justify-between items-start gap-4">
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-navy mb-1">
-                        {event.title}
-                      </h3>
-                    </div>
-                    <div className="text-right shrink-0">
-                      <p className="font-semibold text-burgundy whitespace-nowrap">
-                        {event.time}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div> */}
-
-            <div className="mt-12 pt-8 border-t-2 border-navy/10 text-center">
-              <p className="text-sm text-navy/60 italic">
-                We look forward to celebrating with you!
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="text-center bg-off-white md:py-16 py-12">
-        <a
-          href="/"
-          className="inline-block text-burgundy hover:text-navy transition-all font-medium"
-        >
-          ← Back to Home
-        </a>
-      </section>
+      {/* Desktop version - full images */}
+      <img
+        src="/wedding-brochure-1.png"
+        alt="Wedding Program Outline - Page 1"
+        className="w-full h-auto hidden md:block"
+      />
+      <img
+        src="/wedding-brochure-2.png"
+        alt="Wedding Program Outline - Page 2"
+        className="w-full h-auto hidden md:block"
+      />
     </div>
   );
 }
