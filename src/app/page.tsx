@@ -114,11 +114,7 @@ export default function Home() {
 
           {weddingStarted ? (
             <div className="text-center md:mb-16 mb-12">
-              <p className="text-4xl max-w-5xl mx-auto md:mb-8 mb-6 md:text-[2rem] text-[1.75rem]">
-                The wedding has began! 😊
-              </p>
-
-              <h2 className="md:text-7xl text-5xl font-carattere md:mb-8 mb-6 mt-12 max-w-4xl mx-auto">
+              <h2 className="md:text-7xl text-5xl font-carattere md:mb-8 mb-6 max-w-4xl mx-auto">
                 Freeman Osei-Tete Jr.
               </h2>
 
@@ -131,7 +127,7 @@ export default function Home() {
               </h2>
 
               <p className="text-2xl max-w-3xl mx-auto md:mb-8 mb-6 md:text-[1.5rem] text-[1.25rem]">
-                will be married soon!
+                are married!
               </p>
             </div>
           ) : (
