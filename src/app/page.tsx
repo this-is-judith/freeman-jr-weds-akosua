@@ -9,6 +9,7 @@ export default function Home() {
     minutes: 0,
     seconds: 0,
   });
+  const [weddingStarted, setWeddingStarted] = useState(false);
 
   const [displayedText, setDisplayedText] = useState("");
   const fullText =
@@ -36,14 +37,19 @@ export default function Home() {
       const now = new Date().getTime();
       const distance = weddingDate - now;
 
-      setTimeLeft({
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        ),
-        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((distance % (1000 * 60)) / 1000),
-      });
+      if (distance < 0) {
+        setWeddingStarted(true);
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      } else {
+        setTimeLeft({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          ),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000),
+        });
+      }
     }, 1000);
 
     return () => clearInterval(timer);
@@ -90,42 +96,72 @@ export default function Home() {
         />
 
         <div className="relative z-10">
-          <h2 className="md:text-7xl text-5xl font-carattere md:mb-8 mb-6 max-w-4xl mx-auto">
-            Freeman Osei-Tete Jr.
-          </h2>
+          {!weddingStarted && (
+            <>
+              <h2 className="md:text-7xl text-5xl font-carattere md:mb-8 mb-6 max-w-4xl mx-auto">
+                Freeman Osei-Tete Jr.
+              </h2>
 
-          <p className="text-2xl max-w-3xl mx-auto md:mb-8 mb-6 md:text-[1.5rem] text-[1.25rem]">
-            and
-          </p>
+              <p className="text-2xl max-w-3xl mx-auto md:mb-8 mb-6 md:text-[1.5rem] text-[1.25rem]">
+                and
+              </p>
 
-          <h2 className="md:text-7xl text-5xl font-carattere md:mb-8 mb-6 max-w-4xl mx-auto">
-            Dr. Akosua Ndwaa Nyamekye
-          </h2>
+              <h2 className="md:text-7xl text-5xl font-carattere md:mb-8 mb-6 max-w-4xl mx-auto">
+                Dr. Akosua Ndwaa Nyamekye
+              </h2>
+            </>
+          )}
 
-          <p className="text-2xl max-w-3xl mx-auto mb-8 md:text-[1.5rem] text-[1.25rem]">
-            are getting married in
-          </p>
+          {weddingStarted ? (
+            <div className="text-center md:mb-16 mb-12">
+              <p className="text-4xl max-w-5xl mx-auto md:mb-8 mb-6 md:text-[2rem] text-[1.75rem]">
+                The wedding has began! 😊
+              </p>
 
-          {/* Countdown Timer */}
-          <div className="flex justify-center gap-4 sm:gap-8 md:mb-16 mb-12">
-            {[
-              { value: timeLeft.days, label: "Days" },
-              { value: timeLeft.hours, label: "Hours" },
-              { value: timeLeft.minutes, label: "Minutes" },
-              { value: timeLeft.seconds, label: "Seconds" },
-            ].map((item, idx) => (
-              <div key={idx} className="text-center">
-                <div className="border-navy bg-off-white p-4 sm:p-6 border shadow-lg min-w-[70px] sm:min-w-[90px]">
-                  <p className="text-3xl sm:text-5xl font-bold text-navy font-mono">
-                    {item.value.toString().padStart(2, "0")}
-                  </p>
-                </div>
-                <p className="mt-2 text-xs sm:text-sm text-navy uppercase tracking-wider">
-                  {item.label}
-                </p>
+              <h2 className="md:text-7xl text-5xl font-carattere md:mb-8 mb-6 mt-12 max-w-4xl mx-auto">
+                Freeman Osei-Tete Jr.
+              </h2>
+
+              <p className="text-2xl max-w-3xl mx-auto md:mb-8 mb-6 md:text-[1.5rem] text-[1.25rem]">
+                and
+              </p>
+
+              <h2 className="md:text-7xl text-5xl font-carattere md:mb-8 mb-6 max-w-4xl mx-auto">
+                Dr. Akosua Ndwaa Nyamekye
+              </h2>
+
+              <p className="text-2xl max-w-3xl mx-auto md:mb-8 mb-6 md:text-[1.5rem] text-[1.25rem]">
+                will be married soon!
+              </p>
+            </div>
+          ) : (
+            <>
+              <p className="text-2xl max-w-3xl mx-auto mb-8 md:text-[1.5rem] text-[1.25rem]">
+                are getting married in
+              </p>
+
+              {/* Countdown Timer */}
+              <div className="flex justify-center gap-4 sm:gap-8 md:mb-16 mb-12">
+                {[
+                  { value: timeLeft.days, label: "Days" },
+                  { value: timeLeft.hours, label: "Hours" },
+                  { value: timeLeft.minutes, label: "Minutes" },
+                  { value: timeLeft.seconds, label: "Seconds" },
+                ].map((item, idx) => (
+                  <div key={idx} className="text-center">
+                    <div className="border-navy bg-off-white p-4 sm:p-6 border shadow-lg min-w-[70px] sm:min-w-[90px]">
+                      <p className="text-3xl sm:text-5xl font-bold text-navy font-mono">
+                        {item.value.toString().padStart(2, "0")}
+                      </p>
+                    </div>
+                    <p className="mt-2 text-xs sm:text-sm text-navy uppercase tracking-wider">
+                      {item.label}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
 
           <div className="flex flex-col md:flex-row justify-center md:gap-12 gap-8 max-w-4xl mx-auto px-6 mb-8">
             <div className="flex-1 text-center">
